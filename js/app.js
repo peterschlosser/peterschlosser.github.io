@@ -1,41 +1,30 @@
 jQuery(function()
 {
     "use strict";
-	var d = new Date(); d.setDate(d.getDate() + Math.floor(Math.random() * (6)) + 4);
-	var startdate = ("0"+(d.getMonth()+1)).slice(-2) + "/"
-		+ ("0"+(d.getDate())).slice(-2) + "/" 
-		+ d.getFullYear() + " " 
-		+ ("0" + d.getHours()).slice(-2) + ":" 
-		+ ("0" + d.getMinutes()).slice(-2) 
-		+ ":00";
-	var options = {
-        wrapper: ".wrapper",
-        minHeight: 500
-    };
 
     function setHeight()
     {
         var documentHeight = $(window).height();
-
-        if (documentHeight > options.minHeight)
+        if (documentHeight > 500)
         {
-            $(options.wrapper).height(documentHeight);
+            $(".wrapper").height(documentHeight);
         }
     }
-
     setHeight();
-
     $(window).resize(function()
     {
         setHeight();
     })
 
+	var d = new Date(); d.setDate(d.getDate() + Math.floor(Math.random() * (18)) + 12);
+	var ds = ("0" + (d.getMonth() + 1)).slice(-2) + "/" + ("0" + (d.getDate())).slice(-2) + "/" + d.getFullYear();
     $(".countdown").countDown(
     {
-        date: startdate,
+        date: ds,
         offset: -8
     }, 
     function() 
     {
+		// count elapsed
     });
 });
