@@ -34,5 +34,8 @@ jQuery(function()
     {
         date: startdate,
         offset: 0
-    });
+    }, 
+	function() 
+	{
+	});
 });
