@@ -33,7 +33,7 @@ jQuery(function()
     $(".countdown").countDown(
     {
         date: startdate,
-        offset: 0
+        offset: -8
     }, 
 	function() 
 	{
