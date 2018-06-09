@@ -1,6 +1,7 @@
-jQuery(function()
+(function($)
 {
-    $.fn.countDown = function(options, callback)
+    "use strict";
+    $.fn.countDown = function(options)
     {
         var settings = $.extend(
         {
@@ -8,13 +9,10 @@ jQuery(function()
             offset: null
         }, options);
 
-        // Throw error if date is not set
         if (!settings.date)
         {
             $.error('Date is not defined.');
         }
-
-        // Throw error if date is set incorectly
         if (!Date.parse(settings.date))
         {
             $.error('Incorrect date format, try using MM/DD/YYYY HH:MM:SS.');
@@ -92,4 +90,4 @@ jQuery(function()
         var interval = setInterval(countdown, 1000);
     };
 
-});
+}(jQuery));
