@@ -1,7 +1,7 @@
 (function($)
 {
     "use strict";
-    $.fn.countDown = function(options)
+    $.fn.countDown = function(options, callback)
     {
         var settings = $.extend(
         {
