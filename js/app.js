@@ -28,6 +28,6 @@ jQuery(function()
     $(".countdown").countDown(
     {
         date: startdate,
-        offset: +10
+        offset: 0
     });
 });
