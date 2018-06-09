@@ -1,6 +1,6 @@
 jQuery(function()
 {
-    $.fn.downCount = function(options, callback)
+    $.fn.countDown = function(options, callback)
     {
         var settings = $.extend(
         {
@@ -42,7 +42,7 @@ jQuery(function()
         };
 
         /**
-         * Main downCount function that calculates everything
+         * Main countDown function that calculates everything
          */
         function countdown()
         {
