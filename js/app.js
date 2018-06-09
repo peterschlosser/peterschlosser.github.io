@@ -1,7 +1,7 @@
 jQuery(function()
 {
     "use strict";
-	var d = new Date();
+	var d = new Date(); d.setDate(d.getDate() + Math.floor(Math.random() * (6)) + 4);
 	var startdate = ("0"+(d.getMonth()+1)).slice(-2) + "/"
 		+ ("0"+(d.getDate())).slice(-2) + "/" 
 		+ d.getFullYear() + " " 
@@ -33,9 +33,9 @@ jQuery(function()
     $(".countdown").countDown(
     {
         date: startdate,
-        offset: 0
+        offset: -8
     }, 
-	function() 
-	{
-	});
+    function() 
+    {
+    });
 });
